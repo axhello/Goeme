@@ -1,0 +1,370 @@
+/*
+*typecho主题站模板
+*
+*by Axhello
+*
+*http://ciyuanai.net
+*/
+@-webkit-keyframes flipInY {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+@keyframes flipInY {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+body{
+	font-family: 'Roboto',arial,sans-serif;
+    font-weight: 300;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 0;
+}
+body{
+	background: #f2f2f2;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+}
+ul, li, dl, dd, dt {
+    margin: 0;
+    padding: 0;
+}
+li{
+	list-style: none;
+}
+
+#logo {
+    background: url('../img/logo.png') 0 0 no-repeat;
+    float: left;
+    height: 40px;
+    width: 100px;
+}
+.navbar-padding{
+    padding: 10px
+}
+/*留给幻灯片*/
+.main-header {
+    height: 70vh;
+    min-height: 500px;
+    text-align: center;
+    background-image: url("../img/shengdan.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    /*background-size: cover;*/
+    /*background-attachment: fixed;*/
+    /*box-shadow: 0 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.24);*/
+}
+.middle{
+    width:500px; 
+    height:auto; 
+    position:absolute; 
+    top:50%; 
+    left:50%; 
+    margin-top:-250px; /*height/2*/
+    margin-left:-250px; /*width/2*/
+}
+.fixtop{
+	margin-top: -15%
+}
+@media screen and (max-width: 1163px) {
+    .fixtop{
+        margin-top: -70%
+    }
+    .middle{
+        top:60%!important;
+    }
+}
+@media only screen and (max-width: 480px){  
+	.fixtop{
+		margin-top: -70%
+	}
+    .middle{
+        top:60%!important;
+    }
+}
+/*展示框*/
+.card-pack{
+	-webkit-box-shadow: 0px 0px 7px 0px rgba(50,50,50,0.3);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(50,50,50,0.3);
+    box-shadow: 0px 0px 7px 0px rgba(50,50,50,0.3);
+    text-align: center;
+    padding: 40px 28px 35px;
+    background: #fff;
+    margin: 0 0 30px;
+}
+.card-pack .img-pack>span {
+    display: block;
+    height: 20px;
+    overflow: hidden;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 1;
+    letter-spacing: 0px;
+    margin: 15px 0 25px 0;
+    text-transform: uppercase;
+}
+.img-pack .thumbnail {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border: none;
+}
+.post {
+    position: relative;
+    margin-bottom: 35px;
+    padding-bottom: 45px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3);
+}
+.post-title {
+    position: absolute;
+    font-size: 16px;
+    z-index: 9;
+    bottom: 10px;
+    left: 10px;
+    text-align: center;
+    margin: 0;
+}
+.preview {
+    position: absolute;
+    z-index: 9;
+    bottom: 5px;
+    right: 10px;
+    margin: 0;
+}
+.post-featured-image {
+    position: relative;
+    overflow: hidden;
+}
+.post-featured-image .thumbnail {
+    margin-bottom: 0;
+    padding: 12px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border: none;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+/**/
+.main-footer {
+    background: #202020;
+    padding: 35px 0 0 0;
+    color: #959595;
+}
+.main-footer .widget .title {
+    color: #fff;
+    border-bottom: 1px solid #303030;
+}
+
+.flipInY {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInY;
+  animation-name: flipInY;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    visibility: visible;
+}
+.tp-box{
+	-webkit-box-shadow: 0px 0px 7px 0px rgba(50,50,50,0.1);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(50,50,50,0.1);
+    box-shadow: 0px 0px 7px 0px rgba(50,50,50,0.1);
+    background: #fff;
+    margin-bottom: 5em;
+}
+.tp-page{
+    text-align: center;
+    padding: 40px 0px 10px 25px;
+    background: #fff;
+    margin: 0 0 30px;
+}
+.tp-bar{
+	text-align: left;
+	padding: 40px 28px 35px;
+    background: #fff;
+    margin: 0 0 30px;
+}
+.tp-content {
+    text-align: left;
+    line-height: 1.8;
+    margin-top: 20px;
+    padding-top: 30px;
+    font-weight: 500;
+    font-size: 15px;
+    border-top: 1px solid #ccc;
+}
+.tp-content blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 15px;
+    border-left: 5px solid #BD3434;
+    background: rgba(15,15,10,.1);
+}
+.tp-content p>img{
+    max-width: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+}
+.widget .tag-cloud ul,
+.widget .tag-cloud li,
+.widget .friend-links ul,
+.widget .friend-links li{
+    display: inline;
+}
+.widget {
+    padding: 0 30px;
+    margin-bottom: 30px;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+.widget .title {
+    margin-top: 0;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 21px;
+    position: relative;
+}
+.widget .friend-links a {
+    border: 1px solid #303030;
+    padding: 2px 7px;
+    color: #959595;
+    line-height: 1.5em;
+    display: inline-block;
+    margin: 0 7px 7px 0;
+    transition: all .2s ease;
+}
+.widget .title:after {
+    content: "";
+    width: 80px;
+    height: 1px;
+    background: #337ab7;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+}
+.widget:hover .title:after {
+    width: 200px;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+.widget .tag-cloud a {
+    border: 1px solid #303030;
+    padding: 2px 7px;
+    color: #959595;
+    line-height: 1.5em;
+    display: inline-block;
+    margin: 0 7px 7px 0;
+    transition: all .2s ease;
+}
+input[type="search"]:focus {
+    border-color: #99baca;
+    outline: 0;
+    background: #f5fbfe;
+    color: #444;
+}
+#searchform {
+    display: inline-block;
+    position: relative;
+    max-width: 100%;
+}
+.search-icon {
+    position: absolute!important;
+    top: 7px!important;
+    right: 9px!important;
+    font-size: 14px;
+}
+.pagination {
+    display: block;
+    position: relative;
+    text-align: center;
+    color: #666;
+    margin: 20px 0 40px 0;
+    font-size: 13px;
+}
+.pagination>a.prev {
+    left: 10px;
+}
+.pagination>a.next {
+    right: 10px;
+}
+.pagination>a {
+    border: 1px solid #39414a;
+    position: absolute;
+    top: -10px;
+    padding: 10px;
+    color: #39414a;
+    white-space: nowrap;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    text-decoration: none;
+}
